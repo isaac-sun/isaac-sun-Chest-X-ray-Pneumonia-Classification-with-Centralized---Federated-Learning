@@ -60,6 +60,9 @@ pip install torch torchvision scikit-learn matplotlib seaborn pandas tqdm pyyaml
 
 ## 3) 数据集目录格式
 
+重要说明：本仓库未上传数据集。
+请使用者自行下载 Chest X-ray 数据集，并按以下结构整理。
+
 请将 Chest X-ray 数据集整理为 ImageFolder 格式：
 
 ```text
@@ -74,6 +77,8 @@ data/
     ├── NORMAL/
     └── PNEUMONIA/
 ```
+
+如果你下载的数据集划分方式或类别命名不同，请先调整为上述目录结构后再训练。
 
 ## 4) 运行命令
 

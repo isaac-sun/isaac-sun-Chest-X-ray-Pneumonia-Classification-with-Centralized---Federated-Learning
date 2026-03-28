@@ -60,6 +60,9 @@ pip install torch torchvision scikit-learn matplotlib seaborn pandas tqdm pyyaml
 
 ## 3) Dataset Layout
 
+Important: The dataset is not uploaded to this repository.
+Please download the Chest X-ray dataset yourself and organize it as follows.
+
 Place the Chest X-ray dataset in ImageFolder format:
 
 ```text
@@ -74,6 +77,9 @@ data/
     ├── NORMAL/
     └── PNEUMONIA/
 ```
+
+If your downloaded dataset has a different folder split or class naming, adjust it to match
+the structure above before training.
 
 ## 4) Run Commands
 
