@@ -1,0 +1,41 @@
+seed: 42
+
+data:
+  root_dir: data
+  train_dir: train
+  val_dir: val
+  test_dir: test
+  image_size: 224
+  num_workers: 2
+  pin_memory: true
+  normalize_mean: [0.485, 0.456, 0.406]
+  normalize_std: [0.229, 0.224, 0.225]
+
+model:
+  name: resnet18           # options: simple_cnn, resnet18
+  pretrained: false
+
+training:
+  batch_size: 32
+  epochs: 10
+  learning_rate: 0.0003
+  weight_decay: 0.00001
+
+federated:
+  num_clients: 5
+  rounds: 10
+  local_epochs: 2
+  client_batch_size: 16
+  client_lr: 0.0003
+  client_weight_decay: 0.00001
+  noniid_ratio_span: 0.10
+  noniid_min_ratio_floor: 0.20
+  noniid_max_ratio_cap: 0.85
+  noniid_min_samples_per_class: 1
+  noniid_shuffle_target_ratios: true
+
+paths:
+  outputs_dir: outputs
+  models_dir: outputs/models
+  plots_dir: outputs/plots
+  logs_dir: outputs/logs
